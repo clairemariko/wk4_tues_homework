@@ -1,0 +1,22 @@
+<form action= "/owned_pokemon" method="post">
+
+  <label>Trainers:</label>
+
+    <select name="trainer_id">
+    <% for each in @trainers %>
+      <option value="<%= each.id %>"><%= each.name %></option>
+      <% end %>
+    </select>
+
+    <label>Pokemon:</label>
+
+      <select name="pokemon_id">
+      <% for each in @pokemons %>
+        <option value="<%= each.id %>"><%= each.name %></option>
+        <% end %>
+      </select>
+
+
+
+  <input type='Submit' value="Join">
+</form>
